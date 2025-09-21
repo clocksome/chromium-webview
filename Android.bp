@@ -18,6 +18,10 @@ android_app_import {
         "libwebviewchromium_loader",
         "libwebviewchromium_plat_support",
     ],
+    optional_uses_libs: [
+        "androidx.window.extensions",
+        "com.android.extensions.xr",
+    ],
     arch: {
         arm64: {
             apk: "prebuilt/arm64/webview.apk",
