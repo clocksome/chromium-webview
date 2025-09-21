@@ -1,0 +1,27 @@
+package {
+    default_applicable_licenses: ["external_chromium-webview_license"],
+}
+
+license {
+    name: "external_chromium-webview_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Unicode-DFS",
+    ],
+}
+
+android_app_import {
+    name: "webview",
+    product_specific: true,
+    default_dev_cert: true,
+    required: [
+        "libwebviewchromium_loader",
+        "libwebviewchromium_plat_support",
+    ],
+    arch: {
+        arm64: {
+            apk: "prebuilt/arm64/webview.apk",
+        },
+    },
+    privileged: true,
+}
