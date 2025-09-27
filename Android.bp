@@ -27,5 +27,5 @@ android_app_import {
             apk: "prebuilt/arm64/webview.apk",
         },
     },
-    privileged: true,
+    privileged: true
 }
